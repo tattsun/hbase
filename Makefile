@@ -1,7 +1,10 @@
 install:
 	mvn clean package -DskipTests -Dmaven.javadoc.skip=true
 
-restart: kill start
+restart: kill sleep start
+
+sleep:
+	sleep 5
 
 start:
 	bin/start-hbase.sh
