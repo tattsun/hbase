@@ -111,7 +111,7 @@ if @shell_debug
 end
 
 # Set logging level to avoid verboseness
-org.apache.log4j.Logger.getLogger("org.apache.zookeeper").setLevel(log_level)
+org.apache.log4j.Logger.getLogger("org.apache.zookeeper").setLevel(org.apache.log4j.Level::ERROR)
 org.apache.log4j.Logger.getLogger("org.apache.hadoop.hbase").setLevel(log_level)
 
 # Require HBase now after setting log levels
