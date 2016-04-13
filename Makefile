@@ -10,4 +10,4 @@ kill:
 	./kill-server.sh
 
 shell:
-	bin/hbase shell
+	bin/hbase shell -d # enable debug mode
