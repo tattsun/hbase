@@ -21,4 +21,27 @@
  */
 -->
 <configuration>
+    <property>
+        <name>hbase.rootdir</name>
+        <value>hdfs://localhost:8020/hbase</value>
+    </property>
+    <property>
+        <name>hbase.cluster.distributed</name>
+        <value>true</value>
+    </property>
+
+    <!-- htrace for hbase -->
+    <property>
+        <name>hbase.trace.spanreceiver.classes</name>
+        <value>org.apache.htrace.impl.ZipkinSpanReceiver</value>
+    </property>
+    <property>
+        <name>hbase.htrace.zipkin.collector-hostname</name>
+        <value>192.168.99.100</value>
+    </property>
+    <property>
+        <name>hbase.htrace.zipkin.collector-port</name>
+        <value>9410</value>
+    </property>
+
 </configuration>
